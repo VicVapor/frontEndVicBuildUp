@@ -1,10 +1,26 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-const routes: Routes = [];
+// Components:
+import {ListPersonComponent} from "./components/list-person/list-person.component";
+import {CreatePersonComponent} from "./components/create-person/create-person.component";
+
+
+const routes: Routes = [
+  {
+    path: 'person', component: ListPersonComponent
+  },
+  {
+    path: 'createPerson', component: CreatePersonComponent
+  },
+  {
+    path: '**', redirectTo: ''
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
