@@ -3,14 +3,15 @@
 
   <input type="checkbox" id="chk">
   <div class="signup">
-    <form>
+    <form (submit)="submitPerson()">
       <label for="chk">Sign Up</label>
-      <input type="email" name="email" placeholder="Email" required="true">
-      <input type="password" name="password" placeholder="Password" required="true">
-      <input type="text" name="firstName" placeholder="First Name" required="true">
-      <input type="text" name="lastName" placeholder="Last Name" required="true">
-      <input type="number" name="age" placeholder="Age" required="true">
-      <input type="number" name="phone" placeholder="Phone" required="true">
+      <input type="email" name="email" [(ngModel)]="person.email" placeholder="Email" required="true">
+      <input type="password" name="person_Password" [(ngModel)]="person.person_Password" placeholder="Password"
+             required="true">
+      <input type="text" name="first_Name" [(ngModel)]="person.first_Name" placeholder="First Name" required="true">
+      <input type="text" name="last_Name" [(ngModel)]="person.last_Name" placeholder="Last Name" required="true">
+      <input type="number" name="age" [(ngModel)]="person.age" placeholder="Age" required="true">
+      <input type="number" name="phone" [(ngModel)]="person.phone" placeholder="Phone" required="true">
       <button type="submit">Sign Up</button>
     </form>
   </div>

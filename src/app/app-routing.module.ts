@@ -14,7 +14,7 @@ const routes: Routes = [
     path: 'createPerson', component: CreatePersonComponent
   },
   {
-    path: '**', redirectTo: ''
+    path: '**', redirectTo: 'person'
   }
 ];
 
